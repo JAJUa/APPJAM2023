@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if(_instance != null)
+            if (_instance != null)
             {
                 return _instance;
             }
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         get => _dragonBallCount;
         set
         {
-            if(DragonBallCount != value)
+            if (DragonBallCount != value)
             {
                 int origin = DragonBallCount;
                 _dragonBallCount = value;
@@ -45,12 +45,12 @@ public class GameManager : MonoBehaviour
         get => _dragonBallShardCount;
         set
         {
-            if(DragonBallShardCount != value)
+            if (DragonBallShardCount != value)
             {
                 int origin = DragonBallShardCount;
                 _dragonBallShardCount = value;
 
-                if(DragonBallShardCount >= 3)
+                if (DragonBallShardCount >= 3)
                 {
                     DragonBallShardCount -= 3;
                     DragonBallCount++;
@@ -58,4 +58,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public GuestData CurrentUntGuestData;
 }
