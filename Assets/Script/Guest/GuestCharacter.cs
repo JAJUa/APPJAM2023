@@ -16,12 +16,12 @@ public class GuestCharacter : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> recieveFoodCallBack)
+    public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> finishCallBack)
     {
         _guestData = guestData;
 
         _spriteRenderer.sprite = _guestData.defaultSprite;
-        _guestFinishCallBack = recieveFoodCallBack;
+        _guestFinishCallBack = finishCallBack;
 
         FirstAct(cookingStartCallBack);
     }
