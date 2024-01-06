@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 
 public class MergeFood : MonoBehaviour
@@ -14,12 +11,12 @@ public class MergeFood : MonoBehaviour
         Oven, Mixer,
         MilkCup, MilkCupBass, CookieTray, SmoothieCup, Empty1, CakePlate, Cake2stack, Cake3stack, Cake4stack, Cake5stack, Cake6stack,
         CakeDeco1, CakeDeco2, CakeDeco3, CakeToping1, CakeToping2, CakeToping3, CoqTray1, CoqTray2, RoastCoq1, RoastCoq2, Smoothie1, Smoothie2, Smoothie3,
-        Parfait1, Parfait2, Parfait3
+        Parfait1, Parfait2, Parfait3, MarcaronCream
     }
 
     bool MilkCup, MilkCupBase1, MilkCupBase2, MilkCupBase3, MixIce, MixMilk, MixBase,
         CookieTray, CTOven, CakePlate, CTCream, CakeStack2, CakeStack3, CakeStack4, CakeStack5, CakeStack6,
-        CakeDeco1, CakeDeco2, CakeDeco3, CoqTray1, CoqTray2, MTOven1, MTOven2, RoastCoq1, RoastCoq2,
+        CakeDeco1, CakeDeco2, CakeDeco3, CoqTray1, CoqTray2, MTOven1, MTOven2, RoastCoq1, RoastCoq2, Marcaron, CCookie, MarcaronCream, 
         MixBase1, MixBase2, MixBase3, SmoothieCup, Parfait, Parfait1Deco1, Parfait1Deco2, Parfait2Deco1, Parfait2Deco2, Parfait3Deco1, Parfait3Deco2;
 
     public Material FoodMaterial;
@@ -267,6 +264,27 @@ public class MergeFood : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+            if(CCookie)
+            {
+                Debug.Log("ÄíÅ°");
+                Instantiate(itemManager.CoqCream1);
+                Destroy(EnterItem);
+                Destroy(gameObject);
+            }
+            if(MarcaronCream)
+            {
+                Debug.Log("¸¶Ä«·Õ");
+                Instantiate(itemManager.CoqCream2);
+                Destroy(EnterItem);
+                Destroy(gameObject);
+            }
+            if (Marcaron)
+            {
+                Debug.Log("¸¶Ä«·Õ");
+                Instantiate(itemManager.Maracaron);
+                Destroy(EnterItem);
+                Destroy(gameObject);
+            }
 
 
 
@@ -394,6 +412,13 @@ public class MergeFood : MonoBehaviour
                 MTOven1 = true;
             if (FoodMaterial == Material.CoqTray2 && GetEnum.FoodMaterial == Material.Oven)
                 MTOven2 = true;
+            if (FoodMaterial == Material.RoastCoq1 && GetEnum.FoodMaterial == Material.MacaronFilling)
+                MarcaronCream = true;
+            if (FoodMaterial == Material.RoastCoq2 && GetEnum.FoodMaterial == Material.Plate)
+                CCookie = true;
+            if (FoodMaterial == Material.MarcaronCream && GetEnum.FoodMaterial == Material.Plate)
+                Marcaron = true;
+
 
 
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,27 @@ public class GameManager : MonoBehaviour
             _instance = g.AddComponent<GameManager>();
             DontDestroyOnLoad(g);
             return _instance;
+        }
+    }
+
+    public void AddToMakedFood(Foods food)
+    {
+        if(makedFood == null)
+        {
+            makedFood = new Foods[] { };
+        }
+        System.Array.Resize(ref makedFood, makedFood.Length + 1);
+        makedFood[makedFood.Length - 1] = food;
+    }
+
+    private void FixedUpdate()
+    {
+        if (makedFood == null)
+        {
+            if (makedFood.Length >= 2)
+            {
+                SceneManager.LoadScene("GamePlayScene");
+            }
         }
     }
 

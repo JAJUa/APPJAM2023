@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5216994365728261009}
   - component: {fileID: 4527828875762119043}
   - component: {fileID: -1399566199234841959}
+  - component: {fileID: -4947483116403014310}
   m_Layer: 0
   m_Name: CakeDeco2
   m_TagString: Material
@@ -187,30 +188,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dee02057d060b4cadbbf2e34b80f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MilkCup: 0
-  MilkCupBase1: 0
-  MilkCupBase2: 0
-  MilkCupBase3: 0
-  MixIce: 0
-  MixMilk: 0
-  MixBase: 0
-  CookieTray: 0
-  CTOven: 0
-  CoqTray: 0
-  MTOven: 0
-  CakePlate: 0
-  CTCream: 0
-  CakeStack2: 0
-  CakeStack3: 0
-  CakeStack4: 0
-  CakeStack5: 0
-  CakeStack6: 0
-  CakeDeco1: 0
-  CakeDeco2: 0
-  CakeDeco3: 0
-  mix1: 0
-  mix2: 0
-  mix3: 0
   FoodMaterial: 32
   EnterItem: {fileID: 0}
   itemManager: {fileID: 0}
+--- !u!114 &-4947483116403014310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544119749160110700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb4a7a13c68c744fab2a3aa2fe670a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  makedFood: 15

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5216994365728261009}
   - component: {fileID: 4527828875762119043}
   - component: {fileID: -1399566199234841959}
+  - component: {fileID: 3717811889666437170}
   m_Layer: 0
   m_Name: Latte1
   m_TagString: Material
@@ -190,3 +191,16 @@ MonoBehaviour:
   FoodMaterial: 24
   EnterItem: {fileID: 0}
   itemManager: {fileID: 0}
+--- !u!114 &3717811889666437170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544119749160110700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb4a7a13c68c744fab2a3aa2fe670a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  makedFood: 0

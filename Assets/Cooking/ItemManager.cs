@@ -42,4 +42,5 @@ public class ItemManager : MonoBehaviour
     public GameObject roastCoq2;
     public GameObject CoqCream1;
     public GameObject CoqCream2;
+    public GameObject Maracaron;
 }

@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 5216994365728261009}
   - component: {fileID: 4527828875762119043}
   - component: {fileID: -1399566199234841959}
-  - component: {fileID: -3789450544083093878}
   m_Layer: 0
-  m_Name: Parfait3Deco1
+  m_Name: MarCream
   m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db287b987c774eb4eacb526423ca836d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9f7d80842c6d19438f323befde1457d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,7 +139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.04, y: 2.82}
+    oldSize: {x: 5.47, y: 1.99}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,19 +187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dee02057d060b4cadbbf2e34b80f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FoodMaterial: 1
+  FoodMaterial: 47
   EnterItem: {fileID: 0}
   itemManager: {fileID: 0}
---- !u!114 &-3789450544083093878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5544119749160110700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb4a7a13c68c744fab2a3aa2fe670a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  makedFood: 10
