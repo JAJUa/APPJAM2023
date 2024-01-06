@@ -8,6 +8,19 @@ public class EndingManager : MonoBehaviour
     public GameObject BadEnd;
     public bool isDebug;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            HappyEnd.SetActive(true);
+            BadEnd.SetActive(false);
+        }else if(Input.GetKeyDown(KeyCode.F4))
+        {
+            BadEnd.SetActive(true);
+            HappyEnd.SetActive(false);
+        }
+    }
+
     void Awake()
     {
         if (!isDebug)

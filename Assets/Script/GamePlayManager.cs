@@ -56,7 +56,9 @@ public class GamePlayManager : MonoBehaviour
         }
         else
         {
+            _fadeInOut.FadeOut(_dayChangeFadingTime);
             _guestCharacter.WaitFood(() => _guestCharacter.RecieveFood(GameManager.Instance.makedFood, ProcessGuestResult));
+            GameManager.Instance.makedFood = new Foods[] { };
         }
     }
 
@@ -119,6 +121,8 @@ public class GamePlayManager : MonoBehaviour
 
     private void StartCooking()
     {
+
+        GameManager.Instance.gameState = GameState.FinishCooking;
         _fadeInOut.FadeIn(1, () => SceneManager.LoadScene("TempCookingScene"));
     }
 

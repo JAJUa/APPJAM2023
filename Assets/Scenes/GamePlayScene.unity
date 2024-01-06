@@ -1006,9 +1006,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458475555050535677, guid: 0cb4bf40f9293674aabc6980c43b7939, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7735277557111634649, guid: 0cb4bf40f9293674aabc6980c43b7939, type: 3}
       propertyPath: m_Name
       value: Change Day FadeOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980279655367578378, guid: 0cb4bf40f9293674aabc6980c43b7939, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

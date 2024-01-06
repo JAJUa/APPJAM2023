@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,22 +26,16 @@ public class GameManager : MonoBehaviour
 
     public void AddToMakedFood(Foods food)
     {
-        if(makedFood == null)
-        {
-            makedFood = new Foods[] { };
-        }
-        System.Array.Resize(ref makedFood, makedFood.Length + 1);
-        makedFood[makedFood.Length - 1] = food;
+        List<Foods> l = makedFood.ToList();
+        l.Add(food);
+        makedFood = l.ToArray();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (makedFood == null)
+        if (Input.GetKeyDown(KeyCode.F1))
         {
-            if (makedFood.Length >= 2)
-            {
-                SceneManager.LoadScene("GamePlayScene");
-            }
+            SceneManager.LoadScene("GameEndScene");
         }
     }
 
@@ -49,7 +44,20 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 요리를 통해 완성한 음식값
     /// </summary>
-    public Foods[] makedFood;
+    public Foods[] makedFood { get
+        {
+            if(_makedFood == null)
+            {
+                _makedFood = new Foods[] { };
+            }
+            return _makedFood;
+        }
+        set
+        {
+            _makedFood = value;
+        }
+    }
+    Foods[] _makedFood;
 
     /// <summary>
     /// 매개변수 : 여의주 변화량

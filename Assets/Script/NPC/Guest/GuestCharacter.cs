@@ -17,6 +17,15 @@ public class GuestCharacter : NPC
         {
             _image.sprite = _guestData.defaultSprite;
         }
+
+        image = GetComponentInChildren<Image>();
+    }
+
+    Image image;
+
+    private void Update()
+    {
+        image.enabled = image.sprite != null;
     }
 
     public void StartGuestAct(GuestData guestData, Action cookingStartCallBack)
