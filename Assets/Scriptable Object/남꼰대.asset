@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca2ed6ec10c0564b87be1ac4c77b786, type: 3}
+  m_Name: "\uB0A8\uAF30\uB300"
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300000, guid: beb3e7edee508954d83a4e822d2f26d8, type: 3}
+  infoSprite: {fileID: 21300000, guid: f848f6c91325e304fbef753b0ad10b46, type: 3}
+  neededFood: 0200000005000000
+  startAct:
+  - text: "\uAC70\uAE30 \uC80A\uC740 \uCC98\uC790...\uC5EC\uAE30 \uD30C\uB974\uD398\uC640
+      \uCF00\uC774\uD06C \uC880 \uC8FC\uACA0\uB098..? \uACF5\uC2B5\uACBD\uBCF4~~
+      \uACF5\uC2B5\uACBD\uBCF4~~"
+    guestSprite: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5ec38894863707141b9a2c2b2771a2f0, type: 3}
+  waitAct:
+  - text: "\uB299\uC740\uC774 \uB299\uC5B4 \uC8FD\uAC84\uB2E4............ \uC544\uC9D0\uBA54
+      \uB098 \uACE7 \uAC00\uC720~~"
+    guestSprite: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5ec38894863707141b9a2c2b2771a2f0, type: 3}
+  goodReaction:
+  - text: "\uD6CC\uCA4D... \uB3CC\uC544\uAC04 \uB0B4 \uC544\uB0B4\uAC00 \uAE30\uC5B5\uB098\uB294\uAD6C\uBA3C...\uACE0\uB9D9\uAD6C\uB2E4...
+      \uC774 \uCF00\uC774\uD06C\uB3C4 \uADF8\uC774\uAC00 \uC88B\uC544\uD588\uB294\uB370..."
+    guestSprite: {fileID: 0}
+    clip: {fileID: 0}
+  - text: "\uC774 \uCE74\uD398 \uC8FC\uBCC0\uC5D0\uC11C \uC8FC\uC6E0\uB294\uB514...
+      \uC74C\uB8CC\uAC12 \uB300\uC2E0\uD574\uC11C \uB0BC\uAC8C... \uACE0\uB9D9\uC18C"
+    guestSprite: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5ec38894863707141b9a2c2b2771a2f0, type: 3}
+  badReaction:
+  - text: "\uC544~~~ \uACF5\uC2B5\uACBD\uBCF4 \uACF5\uC2B5\uACBD\uBCF4~~~ \uC774\uBAB8\uC740
+      \uC6A9\uAD81 \uC77C\uC9F1 \uD560\uC544\uBC84\uC9C0\uC774\uB85C\uB2E4!"
+    guestSprite: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5ec38894863707141b9a2c2b2771a2f0, type: 3}
+  - text: "\uC774\uB7F0 \uC4F0\uB808\uAE30 \uC74C\uC2DD\uC740 \uAC00\uC838\uB2E4
+      \uBC84\uB824\uB77C"
+    guestSprite: {fileID: 0}
+    clip: {fileID: 8300000, guid: 5ec38894863707141b9a2c2b2771a2f0, type: 3}

@@ -674,7 +674,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3681f5bc21ca40246bdc858786bccfe7, type: 2}
   - {fileID: 11400000, guid: e4f027c3e9dc8664982b8b2dde6a795b, type: 2}
   - {fileID: 11400000, guid: 093b5315564d07341a671f787af47cf4, type: 2}
-  _day5GuestPool: []
+  _day5GuestPool:
+  - {fileID: 11400000, guid: c65661d1eb913ac4a96455b3477ba9b9, type: 2}
+  - {fileID: 11400000, guid: f29c4cba997eaa14ca4b9b9d8145e656, type: 2}
+  - {fileID: 11400000, guid: 33e9cd5f14b7719469df2ed21a06f29c, type: 2}
+  - {fileID: 11400000, guid: 3c87c8916b3ea674c90b2f38bc9a22be, type: 2}
+  - {fileID: 11400000, guid: 0ed09934ccb9dc448af9b431eadc45f8, type: 2}
   _fadeInOut: {fileID: 2055657408}
   _dayChangeFadingTime: 3
   _dayUIText: {fileID: 2055657410}
