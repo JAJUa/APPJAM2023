@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\uB098\uBC31\uC2181"
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: e40cc8c8cdbf8f24f9e71d127df042af, type: 3}
-  infoSprite: {fileID: 21300000, guid: 680c517f10e9fea48b25ff473a849402, type: 3}
+  infoSprite: {fileID: 21300000, guid: 300c2f86b06b6524184a12114bea6f61, type: 3}
   neededFood: 0000000003000000
   startAct:
   - text: "......\uB77C\uB5BC,\uCFE0\uD0A4"

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca2ed6ec10c0564b87be1ac4c77b786, type: 3}
-  m_Name: "\uBC15\uB3D9\uD0DC"
+  m_Name: "\uBC15\uB3D9\uD0DC1"
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: 81fcdfe647c42004ab8dc5009862031f, type: 3}
-  infoSprite: {fileID: 21300000, guid: e38b541a537e50544913367a7fdbdb69, type: 3}
+  infoSprite: {fileID: 21300000, guid: f1cdf0ff5e542c04694c0fb9892a31d0, type: 3}
   neededFood: 0000000003000000
   startAct:
   - text: "\uB098\uC5D0\uAC8C \uB530\uB73B\uD55C \uB77C\uB5BC\uC640 \uCFE0\uD0A4\uB97C

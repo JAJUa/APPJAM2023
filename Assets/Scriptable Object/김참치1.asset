@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\uAE40\uCC38\uCE581"
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: 7507d63ec326ec0479a2e2d181de5314, type: 3}
-  infoSprite: {fileID: 21300000, guid: 7df9c8b71f6baf741b9c00074464e3be, type: 3}
+  infoSprite: {fileID: 21300000, guid: 0e72ad37046d1d5408acb2ba96741c51, type: 3}
   neededFood: 0100000003000000
   startAct:
   - text: "\uC5B4\uC774 \uCE74\uD398 \uC54C\uBC14\u314B\u314B \uB9DB\uC88B\uC740

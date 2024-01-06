@@ -667,12 +667,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddfd4ab604523fa41b0abef055429e6b, type: 2}
   _day3GuestPool:
   - {fileID: 11400000, guid: 0929b7b2077d23e4b8a361075297caca, type: 2}
-  - {fileID: 11400000, guid: 158ab81ea8e458647a77966b1edd522c, type: 2}
+  - {fileID: 11400000, guid: 0853a983565316c46b1a4d60adfcb998, type: 2}
   - {fileID: 11400000, guid: 20219458971fdaa47a3363948d1f78b2, type: 2}
   _day4GuestPool:
   - {fileID: 11400000, guid: 76191f5da7b6a9945a662f2519855cbb, type: 2}
-  - {fileID: 11400000, guid: e058ed6c72bd8c04db4e71f7f76a044d, type: 2}
+  - {fileID: 11400000, guid: 3681f5bc21ca40246bdc858786bccfe7, type: 2}
   - {fileID: 11400000, guid: e4f027c3e9dc8664982b8b2dde6a795b, type: 2}
+  - {fileID: 11400000, guid: 093b5315564d07341a671f787af47cf4, type: 2}
   _day5GuestPool: []
   _fadeInOut: {fileID: 2055657408}
   _dayChangeFadingTime: 3

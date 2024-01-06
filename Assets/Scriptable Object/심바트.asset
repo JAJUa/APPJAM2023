@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\uC2EC\uBC14\uD2B8"
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: 72eae3002fbbd124686913c789dbce5f, type: 3}
-  infoSprite: {fileID: 21300000, guid: 409f7103babe9c242b1937ec42d38c5e, type: 3}
+  infoSprite: {fileID: 21300000, guid: d217a72bd2f0aae4c8f0f8163fd52357, type: 3}
   neededFood: 0200000003000000
   startAct:
   - text: "\uC5C4\uB9C8\uAC00 \uD30C\uB974\uD398\uB791 \uCFE0\uD0A4\uC0AC\uC624\uB798\uC694...\uAD6C\uB974\uD2B8\uB85C\uD53C\uCE74\uB098
