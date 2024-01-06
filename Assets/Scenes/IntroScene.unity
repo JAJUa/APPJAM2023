@@ -825,8 +825,11 @@ MonoBehaviour:
   image2: {fileID: 1543657287}
   backGround: {fileID: 956109675}
   screenFade: {fileID: 846519717}
-  backGroundSprite: {fileID: 0}
-  introSprites: []
+  backGroundSprite: {fileID: 21300000, guid: 82f052ffccd3e5047a288ff8f32ddcac, type: 3}
+  introSprites:
+  - {fileID: 21300000, guid: df3f13b3ac4cadd48a8bdb8fa56a8e88, type: 3}
+  - {fileID: 21300000, guid: ca5215f009c57264d8ab88ad69f88c01, type: 3}
+  - {fileID: 21300000, guid: 46262e544ad001a49be7abc55df89e6a, type: 3}
   fadingTime: 1
   endFadingTime: 3
 --- !u!1 &1946193987

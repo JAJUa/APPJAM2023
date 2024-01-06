@@ -31,7 +31,7 @@ public class IntroManager : MonoBehaviour
         image2.sprite = backGroundSprite;
         backGround.sprite = backGroundSprite;
 
-
+        ShowLogic();
     }
 
     int spriteIndex;
@@ -43,6 +43,7 @@ public class IntroManager : MonoBehaviour
         }
         else
         {
+            SetButtonAction(Gamestart);
             screenFade.FadeIn(endFadingTime, Gamestart);
         }
     }
