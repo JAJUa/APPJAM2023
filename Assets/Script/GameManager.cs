@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameState gameState = GameState.StartGame;
+
     /// <summary>
     /// 요리를 통해 완성한 음식값
     /// </summary>
@@ -65,4 +67,11 @@ public class GameManager : MonoBehaviour
     }
 
     public GuestData CurrentUntGuestData;
+    public List<GuestData> CurruntDaysGuestPool;
+}
+
+public enum GameState
+{
+    StartGame,
+    FinishCooking
 }

@@ -10,6 +10,7 @@ public class GuestData : ScriptableObject
     public Foods neededFood;
 
     public GuestAct[] startAct;
+    public GuestAct[] waitAct;
     public GuestAct[] goodReaction;
     public GuestAct[] badReaction;
 }

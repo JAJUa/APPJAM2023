@@ -20,16 +20,18 @@ public class GuestCharacter : NPC
         _guestData = guestData;
 
         _spriteRenderer.sprite = _guestData.defaultSprite;
+
+        FirstAct(cookingStartCallBack);
     }
 
-    public void FinishGuestAct()
+    private void FinishGuestAct()
     {
         _guestData = null;
         _speachBurble.FinishTalk();
         _spriteRenderer.sprite = null;
     }
 
-    public void FirstAct(Action callBack)
+    private void FirstAct(Action callBack)
     {
         Act(_guestData.startAct, () => { _speachBurble.FinishTalk(); callBack?.Invoke(); });
     }
@@ -39,7 +41,7 @@ public class GuestCharacter : NPC
         Action<bool> act = (isSame) =>
         {
             finishCallBack?.Invoke(isSame);
-            _speachBurble.FinishTalk();
+            FinishGuestAct();
         };
 
         if (food == _guestData.neededFood)
@@ -50,6 +52,11 @@ public class GuestCharacter : NPC
         {
             BadReaction(() => act?.Invoke(false));
         }
+    }
+
+    public void WaitFood(Action callBack)
+    {
+        Act(_guestData.waitAct, callBack);
     }
 
     private void GoodReaction(Action callBack)
