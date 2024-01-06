@@ -28,18 +28,24 @@ public class GuestCharacter : MonoBehaviour
 
     private void FirstAct(Action callBack)
     {
-        Act(_guestData.startAct, callBack);
+        Act(_guestData.startAct, () => { callBack?.Invoke(); _speachBurble.FinishTalk(); });
     }
 
     public void RecieveFood(Foods food)
     {
+        Action<bool> act = (isSame) =>
+        {
+            _guestFinishCallBack?.Invoke(isSame);
+            _speachBurble.FinishTalk();
+        };
+
         if (food == _guestData.neededFood)
         {
-            GoodReaction(() => _guestFinishCallBack?.Invoke(true));
+            GoodReaction(() => act?.Invoke(true));
         }
         else
         {
-            BadReaction(() => _guestFinishCallBack?.Invoke(false));
+            BadReaction(() => act?.Invoke(false));
         }
     }
 
