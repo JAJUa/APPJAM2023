@@ -31,9 +31,9 @@ public class GuestCharacter : MonoBehaviour
         Act(_guestData.startAct, callBack);
     }
 
-    public void RecieveFood()
+    public void RecieveFood(Foods food)
     {
-        if (true)
+        if (food == _guestData.neededFood)
         {
             GoodReaction(() => _guestFinishCallBack?.Invoke(true));
         }
