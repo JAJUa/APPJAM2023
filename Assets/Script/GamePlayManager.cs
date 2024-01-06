@@ -10,7 +10,25 @@ public class GamePlayManager : MonoBehaviour
 {
     [Header("손님")]
     [SerializeField] private GuestCharacter _guestCharacter;
-    [SerializeField] private GuestData[][] _guestDatas;
+    [SerializeField] private GuestData[] _day1GuestPool;
+    [SerializeField] private GuestData[] _day2GuestPool;
+    [SerializeField] private GuestData[] _day3GuestPool;
+    [SerializeField] private GuestData[] _day4GuestPool;
+    [SerializeField] private GuestData[] _day5GuestPool;
+    private GuestData[][] _guestDatas
+    {
+        get
+        {
+            return new GuestData[][]
+            {
+                _day1GuestPool,
+                _day2GuestPool,
+                _day3GuestPool,
+                _day4GuestPool,
+                _day5GuestPool,
+            };
+        }
+    }
     [Header("페이드 인아웃")]
     [SerializeField] private FadeInOut _fadeInOut;
     [Header("날짜 전환 연출")]
@@ -73,7 +91,14 @@ public class GamePlayManager : MonoBehaviour
             yield return new WaitForSeconds(_dayChangeFadingTime + 1);
             _dayUIfade.FadeOut(_dayChangeFadingTime);
             _fadeInOut.FadeOut(_dayChangeFadingTime);
-            SummonRandomGuest();
+            if (GameManager.Instance.CurruntDaysGuestPool.Count > 0)
+            {
+                SummonRandomGuest();
+            }
+            else
+            {
+                FinishDay();
+            }
         }
     }
 

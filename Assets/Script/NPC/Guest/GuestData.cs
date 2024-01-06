@@ -7,6 +7,7 @@ using UnityEngine;
 public class GuestData : ScriptableObject
 {
     public Sprite defaultSprite;
+    public Sprite infoSprite;
     public Foods neededFood;
 
     public GuestAct[] startAct;

@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuestCharacter : NPC
 {
-    private GuestData _guestData { get=>GameManager.Instance.CurrentUntGuestData;set { GameManager.Instance.CurrentUntGuestData = value; } }
+    [SerializeField] private Image _guestInfoImage;
+
+    private GuestData _guestData { get => GameManager.Instance.CurrentUntGuestData; set { GameManager.Instance.CurrentUntGuestData = value; } }
 
     private void Awake()
     {
@@ -20,6 +23,8 @@ public class GuestCharacter : NPC
         _guestData = guestData;
 
         _image.sprite = _guestData.defaultSprite;
+        _guestInfoImage.enabled = true;
+        _guestInfoImage.sprite = _guestData.infoSprite;
 
         FirstAct(cookingStartCallBack);
     }
@@ -28,6 +33,7 @@ public class GuestCharacter : NPC
     {
         _guestData = null;
         _speachBurble.FinishTalk();
+        _guestInfoImage.enabled = false;
         _image.sprite = null;
     }
 
