@@ -28,7 +28,7 @@ public class GuestCharacter : MonoBehaviour
 
     private void FirstAct(Action callBack)
     {
-        Act(_guestData.startAct, () => { callBack?.Invoke(); _speachBurble.FinishTalk(); });
+        Act(_guestData.startAct, () => { _speachBurble.FinishTalk(); callBack?.Invoke(); });
     }
 
     public void RecieveFood(Foods food)
