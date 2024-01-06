@@ -17,8 +17,8 @@ public class GuestSpeachBurble : MonoBehaviour
 
         _button.onClick.AddListener(new(() =>
         {
-            callBack?.Invoke();
             _button.onClick.RemoveAllListeners();
+            callBack?.Invoke();
         }));
     }
 
