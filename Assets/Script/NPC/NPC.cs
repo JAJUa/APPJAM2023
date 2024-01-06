@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
     [SerializeField] protected GuestSpeachBurble _speachBurble;
-    [SerializeField] protected SpriteRenderer _spriteRenderer;
+    [SerializeField] protected Image _image;
 
     protected void Act(GuestAct[] actData, Action callBack)
     {
@@ -17,7 +18,7 @@ public class NPC : MonoBehaviour
             {
                 if (actData[actIndex].guestSprite != null)
                 {
-                    _spriteRenderer.sprite = actData[actIndex].guestSprite;
+                    _image.sprite = actData[actIndex].guestSprite;
                 }
                 if (actData[actIndex].clip != null)
                 {

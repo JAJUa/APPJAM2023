@@ -11,7 +11,7 @@ public class GuestCharacter : NPC
     {
         if (_guestData != null)
         {
-            _spriteRenderer.sprite = _guestData.defaultSprite;
+            _image.sprite = _guestData.defaultSprite;
         }
     }
 
@@ -19,7 +19,7 @@ public class GuestCharacter : NPC
     {
         _guestData = guestData;
 
-        _spriteRenderer.sprite = _guestData.defaultSprite;
+        _image.sprite = _guestData.defaultSprite;
 
         FirstAct(cookingStartCallBack);
     }
@@ -28,7 +28,7 @@ public class GuestCharacter : NPC
     {
         _guestData = null;
         _speachBurble.FinishTalk();
-        _spriteRenderer.sprite = null;
+        _image.sprite = null;
     }
 
     private void FirstAct(Action callBack)
