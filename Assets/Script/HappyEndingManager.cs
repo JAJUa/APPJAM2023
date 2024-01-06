@@ -20,6 +20,7 @@ public class HappyEndingManager : StoryManager
     [SerializeField] private Sprite sprite4;
     [TextArea][SerializeField] private string script7;
     [TextArea][SerializeField] private string script8;
+    [SerializeField] private Sprite sprite5;
     [TextArea][SerializeField] private string script9;
     [SerializeField] private FadeInOut screenFade;
     [SerializeField] private float endingFadeTime;
@@ -52,13 +53,15 @@ public class HappyEndingManager : StoryManager
                     ShowText(script7, () =>
                     Delay(scriptDelay, () =>
                     ShowText(script8, () =>
-                    Delay(scriptDelay, () =>
-                    ShowText(script9, () =>
-                    Delay(scriptDelay, () =>
-                    {
-                        SetButtonAction(null);
-                        screenFade.FadeIn(endingFadeTime, GoToTitle);
-                    }))))));
+                    Delay(scriptDelay, () => {
+                        ShowImage(sprite5);
+                        ShowText(script9, () =>
+                        Delay(scriptDelay, () =>
+                        {
+                            SetButtonAction(null);
+                            screenFade.FadeIn(endingFadeTime, GoToTitle);
+                        }));
+                    }))));
                 }))));
             }))));
         }))));
