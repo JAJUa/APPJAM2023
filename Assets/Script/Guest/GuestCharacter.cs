@@ -13,7 +13,7 @@ public class GuestCharacter : MonoBehaviour
 
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> finishCallBack)
