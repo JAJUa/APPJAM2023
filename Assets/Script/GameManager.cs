@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 요리를 통해 완성한 음식값
     /// </summary>
-    public Foods makedFood;
+    public Foods[] makedFood;
 
     /// <summary>
     /// 매개변수 : 여의주 변화량

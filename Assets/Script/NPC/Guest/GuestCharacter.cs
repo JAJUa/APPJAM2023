@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,7 +43,7 @@ public class GuestCharacter : NPC
         Act(_guestData.startAct, () => { _speachBurble.FinishTalk(); callBack?.Invoke(); });
     }
 
-    public void RecieveFood(Foods food, Action<bool> finishCallBack)
+    public void RecieveFood(Foods[] food, Action<bool> finishCallBack)
     {
         Action<bool> act = (isSame) =>
         {
@@ -50,7 +51,7 @@ public class GuestCharacter : NPC
             FinishGuestAct();
         };
 
-        if (food == _guestData.neededFood)
+        if (CompareFood(food, _guestData.neededFood))
         {
             GoodReaction(() => act?.Invoke(true));
         }
@@ -58,6 +59,18 @@ public class GuestCharacter : NPC
         {
             BadReaction(() => act?.Invoke(false));
         }
+    }
+
+    private bool CompareFood(Foods[] a, Foods[] b)
+    {
+        if (a.Length != b.Length) return false;
+
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (!b.Contains(a[i])) return false;
+        }
+
+        return true;
     }
 
     public void WaitFood(Action callBack)
