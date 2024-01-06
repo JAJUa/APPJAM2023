@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BadEndingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private FadeInOut screenFade;
+
     void Start()
     {
-        
+        screenFade.FadeOut(3, () =>
+        Delay(() =>
+        screenFade.FadeIn(3, () =>
+        SceneManager.LoadScene("Title"))));
     }
 
-    // Update is called once per frame
-    void Update()
+    void Delay(Action action)
     {
-        
+        StartCoroutine(Routine());
+        IEnumerator Routine()
+        {
+            yield return new WaitForSeconds(2);
+            action?.Invoke();
+        }
     }
 }
