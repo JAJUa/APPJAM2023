@@ -5,20 +5,19 @@ using UnityEngine.UI;
 
 public class DragonBallUI : MonoBehaviour
 {
-    [SerializeField] Text text;
+    [SerializeField] Text dragonBallCountText;
+    [SerializeField] Text dragonBallShardCountText;
 
     private void Awake()
     {
-        text = GetComponent<Text>();
-
         GameManager.Instance.OnChangedDragonBallCount += (_) =>
         {
-            RefreshUI(GameManager.Instance.DragonBallCount);
+            dragonBallCountText.text = GameManager.Instance.DragonBallCount.ToString();
         };
-    }
 
-    private void RefreshUI(int dragonBallCount)
-    {
-        text.text = dragonBallCount.ToString();
+        GameManager.Instance.OnChangedDragonBallShardCount += (_) =>
+        {
+            dragonBallShardCountText.text = GameManager.Instance.DragonBallShardCount.ToString();
+        };
     }
 }
