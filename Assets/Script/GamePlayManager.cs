@@ -40,11 +40,11 @@ public class GamePlayManager : MonoBehaviour
     [Header("손님<->요리 전환 연출")]
     [SerializeField] private float _cookingFadingTime;
 
-    public int curruntDay { get; private set; }
+    public int curruntDay { get => GameManager.Instance.curruntDay; private set => GameManager.Instance.curruntDay = value; }
 
     private void Start()
     {
-        if(SoundManager.Instance.CurruntBgm!= _bgmClip)
+        if (SoundManager.Instance.CurruntBgm != _bgmClip)
         {
             SoundManager.Instance.SetBgm(_bgmClip);
         }

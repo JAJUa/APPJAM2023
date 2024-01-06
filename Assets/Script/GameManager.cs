@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     public GuestData CurrentGuestData;
     public List<GuestData> CurruntDaysGuestPool;
+    public int curruntDay;
 }
 
 public enum GameState
