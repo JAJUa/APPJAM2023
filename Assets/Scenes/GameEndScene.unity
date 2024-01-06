@@ -1282,6 +1282,7 @@ MonoBehaviour:
   backGround: {fileID: 927875200}
   backGroundSprite: {fileID: 21300000, guid: 82f052ffccd3e5047a288ff8f32ddcac, type: 3}
   fadingTime: 1
+  bgmClip: {fileID: 8300000, guid: 1260b96a082727446a9d991198d091c7, type: 3}
   scriptDelay: 3
   sprite1: {fileID: 21300000, guid: 15e0cfa1d6d7ff644b793527e8f3a04a, type: 3}
   script1: "5\uC77C\uC774\uB77C\uB294 \uC9E7\uC740 \uB098\uB0A0\uB4E4\uC774 \uC9C0\uB098\uACE0

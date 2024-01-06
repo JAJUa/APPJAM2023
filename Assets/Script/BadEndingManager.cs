@@ -10,6 +10,8 @@ public class BadEndingManager : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.StopBgm();
+
         screenFade.FadeOut(3, () =>
         Delay(() =>
         screenFade.FadeIn(3, () =>

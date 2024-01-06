@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class HappyEndingManager : StoryManager
 {
     [Header("¿£µù ¼³Á¤")]
+    [SerializeField] private AudioClip bgmClip;
     [SerializeField] private float scriptDelay;
     [SerializeField] private Sprite sprite1;
     [TextArea][SerializeField] private string script1;
@@ -28,6 +29,8 @@ public class HappyEndingManager : StoryManager
     protected override void Start()
     {
         base.Start();
+
+        SoundManager.Instance.SetBgm(bgmClip);
 
         //Á¤½Å³ª°¥°Í°°¿¨¿¨¿¡¤Ä¤·¿¨¤·
         screenFade.FadeOut(1);

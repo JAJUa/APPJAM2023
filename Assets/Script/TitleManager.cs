@@ -13,6 +13,8 @@ public class TitleManager : MonoBehaviour
     {
         screenFade.FadeOut(1);
         button.onClick.AddListener(new(LoadScene));
+
+        SoundManager.Instance.StopBgm();
     }
 
     void LoadScene()
