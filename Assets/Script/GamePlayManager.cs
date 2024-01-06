@@ -71,7 +71,7 @@ public class GamePlayManager : MonoBehaviour
             }
             else
             {
-                FinishDay();
+                FinishGame();
             }
         }
     }
@@ -108,17 +108,17 @@ public class GamePlayManager : MonoBehaviour
         GameManager.Instance.CurrentGuestData = GameManager.Instance.CurruntDaysGuestPool[Random.Range(0, GameManager.Instance.CurruntDaysGuestPool.Count)];
         GameManager.Instance.CurruntDaysGuestPool.Remove(GameManager.Instance.CurrentGuestData);
 
-        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentGuestData, () => { _fadeInOut.FadeIn(1, StartCooking); });
+        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentGuestData, StartCooking);
     }
 
     private void StartCooking()
     {
-        SceneManager.LoadScene("TempCookingScene");
+        _fadeInOut.FadeIn(1, () => SceneManager.LoadScene("TempCookingScene"));
     }
 
     private void FinishGame()
     {
-        //나중에 만들어야됨
+        _fadeInOut.FadeIn(1, () => SceneManager.LoadScene("GameEndScene"));
     }
 
     private void ProcessGuestResult(bool isSuccess)
