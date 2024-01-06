@@ -19,6 +19,10 @@ public class NPC : MonoBehaviour
                 {
                     _spriteRenderer.sprite = actData[actIndex].guestSprite;
                 }
+                if (actData[actIndex].clip != null)
+                {
+                    SoundManager.Instance.Play(actData[actIndex].clip);
+                }
                 _speachBurble.Talk(actData[actIndex], NextAct);
             }
             else

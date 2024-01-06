@@ -19,4 +19,5 @@ public struct GuestAct
 {
     public string text;
     public Sprite guestSprite;
+    public AudioClip clip;
 }
