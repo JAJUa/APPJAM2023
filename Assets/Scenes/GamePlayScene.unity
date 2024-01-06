@@ -659,6 +659,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guestCharacter: {fileID: 21980788}
+  _day1GuestPool: []
+  _day2GuestPool: []
+  _day3GuestPool: []
+  _day4GuestPool: []
+  _day5GuestPool: []
   _fadeInOut: {fileID: 2055657408}
   _dayChangeFadingTime: 3
   _dayUIText: {fileID: 2055657410}
