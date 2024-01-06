@@ -84,5 +84,6 @@ public class StoryManager : MonoBehaviour
             text2Fade.FadeIn(fadingTime, callBack);
             text2.text = text;
         }
+        textCounter = !textCounter;
     }
 }
