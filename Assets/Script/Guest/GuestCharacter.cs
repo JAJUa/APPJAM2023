@@ -6,7 +6,7 @@ using UnityEngine;
 public class GuestCharacter : MonoBehaviour
 {
     [SerializeField] private GuestSpeachBurble _speachBurble;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer _spriteRenderer;
 
     private GuestData _guestData;
     private Action<bool> _guestFinishCallBack;
