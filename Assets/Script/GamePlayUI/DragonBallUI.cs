@@ -8,16 +8,9 @@ public class DragonBallUI : MonoBehaviour
     [SerializeField] Text dragonBallCountText;
     [SerializeField] Text dragonBallShardCountText;
 
-    private void Awake()
+    private void Update()
     {
-        GameManager.Instance.OnChangedDragonBallCount += (_) =>
-        {
-            dragonBallCountText.text = GameManager.Instance.DragonBallCount.ToString();
-        };
-
-        GameManager.Instance.OnChangedDragonBallShardCount += (_) =>
-        {
-            dragonBallShardCountText.text = GameManager.Instance.DragonBallShardCount.ToString();
-        };
+        dragonBallCountText.text = GameManager.Instance.DragonBallCount.ToString();
+        dragonBallShardCountText.text = GameManager.Instance.DragonBallShardCount.ToString();
     }
 }

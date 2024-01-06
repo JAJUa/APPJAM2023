@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 매개변수 : 여의주 변화량
     /// </summary>
-    public event Action<int> OnChangedDragonBallCount;
     private int _dragonBallCount;
     public int DragonBallCount
     {
@@ -36,12 +35,10 @@ public class GameManager : MonoBehaviour
             {
                 int origin = DragonBallCount;
                 _dragonBallCount = value;
-                OnChangedDragonBallCount?.Invoke(DragonBallCount - origin);
             }
         }
     }
 
-    public event Action<int> OnChangedDragonBallShardCount;
     private int _dragonBallShardCount;
     public int DragonBallShardCount
     {
@@ -52,7 +49,6 @@ public class GameManager : MonoBehaviour
             {
                 int origin = DragonBallShardCount;
                 _dragonBallShardCount = value;
-                OnChangedDragonBallShardCount?.Invoke(DragonBallShardCount - origin);
 
                 if(DragonBallShardCount >= 3)
                 {

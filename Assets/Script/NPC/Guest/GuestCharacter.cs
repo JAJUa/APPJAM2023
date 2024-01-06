@@ -6,14 +6,12 @@ using UnityEngine;
 public class GuestCharacter : NPC
 {
     private GuestData _guestData;
-    private Action<bool> _guestFinishCallBack;
 
-    public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> finishCallBack)
+    public void StartGuestAct(GuestData guestData, Action cookingStartCallBack)
     {
         _guestData = guestData;
 
         _spriteRenderer.sprite = _guestData.defaultSprite;
-        _guestFinishCallBack = finishCallBack;
 
         FirstAct(cookingStartCallBack);
     }
@@ -23,11 +21,11 @@ public class GuestCharacter : NPC
         Act(_guestData.startAct, () => { _speachBurble.FinishTalk(); callBack?.Invoke(); });
     }
 
-    public void RecieveFood(Foods food)
+    public void RecieveFood(Foods food, Action<bool> finishCallBack)
     {
         Action<bool> act = (isSame) =>
         {
-            _guestFinishCallBack?.Invoke(isSame);
+            finishCallBack?.Invoke(isSame);
             _speachBurble.FinishTalk();
         };
 
