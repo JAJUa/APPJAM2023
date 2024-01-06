@@ -35,8 +35,30 @@ public class GameManager : MonoBehaviour
             if(DragonBallCount != value)
             {
                 int origin = DragonBallCount;
-                DragonBallCount = value;
+                _dragonBallCount = value;
                 OnChangedDragonBallCount?.Invoke(DragonBallCount - origin);
+            }
+        }
+    }
+
+    public event Action<int> OnChangedDragonBallShardCount;
+    private int _dragonBallShardCount;
+    public int DragonBallShardCount
+    {
+        get => _dragonBallShardCount;
+        set
+        {
+            if(DragonBallShardCount != value)
+            {
+                int origin = DragonBallShardCount;
+                _dragonBallShardCount = value;
+                OnChangedDragonBallShardCount?.Invoke(DragonBallShardCount - origin);
+
+                if(DragonBallShardCount >= 3)
+                {
+                    DragonBallShardCount -= 3;
+                    DragonBallCount++;
+                }
             }
         }
     }
