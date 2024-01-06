@@ -28,6 +28,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private Sprite endingSprite;
     [SerializeField] private string endingText;
     [SerializeField] private float fadingTime;
+    [SerializeField] private float flashDelayTime;
     [SerializeField] private float flashFadingTime;
     [SerializeField] private float endFadingTime;
 
@@ -71,14 +72,25 @@ public class IntroManager : MonoBehaviour
         else
         {
             ShowImage(endingSprite);
-            ShowText(endingText, () => flashFade.FadeIn(flashFadingTime, () => screenFade.FadeIn(endFadingTime, Gamestart)));
+            ShowText(endingText, null);
+            SetButtonAction(null);
+
+            StartCoroutine(Delay());
+            IEnumerator Delay()
+            {
+                yield return new WaitForSeconds(flashDelayTime);
+                flashFade.FadeIn(flashFadingTime, () => screenFade.FadeIn(endFadingTime, Gamestart));
+            }
         }
     }
 
     private void SetButtonAction(Action action)
     {
         button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(new(action));
+        if (action != null)
+        {
+            button.onClick.AddListener(new(action));
+        }
     }
 
     bool imageCounter;
