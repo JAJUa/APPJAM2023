@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GuestData CurrentUntGuestData;
+    public GuestData CurrentGuestData;
     public List<GuestData> CurruntDaysGuestPool;
 }
 

@@ -8,7 +8,7 @@ public class GuestCharacter : NPC
 {
     [SerializeField] private Image _guestInfoImage;
 
-    private GuestData _guestData { get => GameManager.Instance.CurrentUntGuestData; set { GameManager.Instance.CurrentUntGuestData = value; } }
+    private GuestData _guestData { get => GameManager.Instance.CurrentGuestData; set { GameManager.Instance.CurrentGuestData = value; } }
 
     private void Awake()
     {

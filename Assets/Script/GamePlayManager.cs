@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -104,15 +105,15 @@ public class GamePlayManager : MonoBehaviour
 
     private void SummonRandomGuest()
     {
-        GameManager.Instance.CurrentUntGuestData = GameManager.Instance.CurruntDaysGuestPool[Random.Range(0, GameManager.Instance.CurruntDaysGuestPool.Count)];
-        GameManager.Instance.CurruntDaysGuestPool.Remove(GameManager.Instance.CurrentUntGuestData);
+        GameManager.Instance.CurrentGuestData = GameManager.Instance.CurruntDaysGuestPool[Random.Range(0, GameManager.Instance.CurruntDaysGuestPool.Count)];
+        GameManager.Instance.CurruntDaysGuestPool.Remove(GameManager.Instance.CurrentGuestData);
 
-        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentUntGuestData, StartCooking);
+        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentGuestData, StartCooking);
     }
 
     private void StartCooking()
     {
-        //나중에 연결해야됨
+        
     }
 
     private void FinishGame()
