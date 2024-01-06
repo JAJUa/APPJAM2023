@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,13 +35,28 @@ public class SoundManager : MonoBehaviour
 
     public void SetBgm(AudioClip bgm)
     {
-        StopBgm();
-        _bgmAudioSource.clip = bgm;
-        _bgmAudioSource.Play();
+        StopBgm(() =>
+        {
+            _bgmAudioSource.volume = 1;
+            _bgmAudioSource.clip = bgm;
+            _bgmAudioSource.Play();
+        });
     }
 
-    public void StopBgm()
+    public void StopBgm(Action callBack = null)
     {
-        _bgmAudioSource.Stop();
+        StopAllCoroutines();
+        StartCoroutine(Mute(callBack));
+        IEnumerator Mute(Action callBack)
+        {
+            while (_bgmAudioSource.volume > 0)
+            {
+                yield return null;
+                _bgmAudioSource.volume -= Time.deltaTime;
+            }
+            _bgmAudioSource.Stop();
+            _bgmAudioSource.volume = 1;
+            callBack?.Invoke();
+        }
     }
 }
