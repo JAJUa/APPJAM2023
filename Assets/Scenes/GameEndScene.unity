@@ -944,6 +944,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3933931893406666168, guid: 1c241dc265f7dfa4cb5cea8f2c64f77e, type: 3}
   m_PrefabInstance: {fileID: 1470434319}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1470434321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4825914505640905388, guid: 1c241dc265f7dfa4cb5cea8f2c64f77e, type: 3}
+  m_PrefabInstance: {fileID: 1470434319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149f3b915e754c7409a480316a8c475b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788267143
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +995,14 @@ MonoBehaviour:
   backGround: {fileID: 927875200}
   backGroundSprite: {fileID: 21300000, guid: 82f052ffccd3e5047a288ff8f32ddcac, type: 3}
   fadingTime: 1
+  sprite1: {fileID: 21300000, guid: ca6892278a9a6984facb3ad5cdecf67e, type: 3}
+  sprite2: {fileID: 21300000, guid: c31f6ee3b29b10c4397d1e348b92e024, type: 3}
+  sprite3: {fileID: 21300000, guid: 6e64809a497e8be4da39d6c267905b57, type: 3}
+  script1: 
+  sprite4: {fileID: 21300000, guid: 0ec25309edc4a19429852cdb6fa11e04, type: 3}
+  script2: 
+  screenFade: {fileID: 1470434321}
+  endingFadeTime: 3
 --- !u!114 &1788267145
 MonoBehaviour:
   m_ObjectHideFlags: 0

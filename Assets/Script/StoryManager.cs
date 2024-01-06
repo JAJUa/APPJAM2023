@@ -48,18 +48,18 @@ public class StoryManager : MonoBehaviour
     }
 
     bool imageCounter;
-    protected void ShowImage(Sprite sprite)
+    protected void ShowImage(Sprite sprite, Action callBack = null)
     {
         if (imageCounter)
         {
             image1.sprite = sprite;
-            image1Fade.FadeIn(fadingTime);
+            image1Fade.FadeIn(fadingTime, callBack);
             image2Fade.FadeOut(fadingTime);
         }
         else
         {
             image2.sprite = sprite;
-            image2Fade.FadeIn(fadingTime);
+            image2Fade.FadeIn(fadingTime, callBack);
             image1Fade.FadeOut(fadingTime);
         }
         imageCounter = !imageCounter;
