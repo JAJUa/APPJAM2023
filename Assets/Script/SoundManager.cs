@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
     private AudioSource _sfxAudioSource;
     private AudioSource _bgmAudioSource;
 
+    public AudioClip CurruntBgm => _bgmAudioSource.clip;
+
     public static SoundManager Instance
     {
         get

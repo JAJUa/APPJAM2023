@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 
 public class GamePlayManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip _bgmClip;
     [Header("¼Õ´Ô")]
     [SerializeField] private GuestCharacter _guestCharacter;
     [SerializeField] private GuestData[] _day1GuestPool;
@@ -43,6 +44,11 @@ public class GamePlayManager : MonoBehaviour
 
     private void Start()
     {
+        if(SoundManager.Instance.CurruntBgm!= _bgmClip)
+        {
+            SoundManager.Instance.SetBgm(_bgmClip);
+        }
+
         _fadeInOut.SetFade(true);
         if (GameManager.Instance.gameState == GameState.StartGame)
         {

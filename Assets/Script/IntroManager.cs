@@ -22,6 +22,7 @@ public class IntroManager : MonoBehaviour
     private FadeInOut text2Fade;
 
     [Header("인트로 설정")]
+    [SerializeField] private AudioClip bgmClip;
     [SerializeField] private Sprite backGroundSprite;
     [SerializeField] private CutSceneData[] introCutScenes;
     [SerializeField] private Sprite endingSprite;
@@ -42,6 +43,8 @@ public class IntroManager : MonoBehaviour
         text1.text = string.Empty;
         text2.text = string.Empty;
         backGround.sprite = backGroundSprite;
+
+        SoundManager.Instance.SetBgm(bgmClip);
 
         ShowLogic();
     }
