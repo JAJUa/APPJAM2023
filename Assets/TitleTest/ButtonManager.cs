@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
     void Start_B()
     {
         Debug.Log("æ¿ ¿Ãµø");
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadScene("IntroScene");
     }
 
     void Option_B()
