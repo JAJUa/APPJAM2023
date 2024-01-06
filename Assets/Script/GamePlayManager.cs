@@ -46,7 +46,14 @@ public class GamePlayManager : MonoBehaviour
         IEnumerator Delay()
         {
             yield return new WaitForSeconds(_dayChangeFadingTime);
-            StartDay();
+            if (_guestDatas.Length > curruntDay)
+            {
+                StartDay();
+            }
+            else
+            {
+                FinishDay();
+            }
         }
     }
 
@@ -83,6 +90,11 @@ public class GamePlayManager : MonoBehaviour
         //나중에 연결해야됨
     }
 
+    private void FinishGame()
+    {
+        //나중에 만들어야됨
+    }
+
     private void ProcessGuestResult(bool isSuccess)
     {
         if (isSuccess)
@@ -97,6 +109,10 @@ public class GamePlayManager : MonoBehaviour
             if (GameManager.Instance.CurruntDaysGuestPool.Count > 0)
             {
                 SummonRandomGuest();
+            }
+            else
+            {
+                FinishDay();
             }
         }
     }
