@@ -43,7 +43,11 @@ public class StoryManager : MonoBehaviour
         button.onClick.RemoveAllListeners();
         if (action != null)
         {
-            button.onClick.AddListener(new(action));
+            button.onClick.AddListener(new(() =>
+            {
+                button.onClick.RemoveAllListeners();
+                action?.Invoke();
+            }));
         }
     }
 
@@ -70,15 +74,15 @@ public class StoryManager : MonoBehaviour
     {
         if (textCounter)
         {
-            text1.text = text;
-            text1Fade.FadeIn(fadingTime, callBack);
             text2Fade.FadeOut(fadingTime);
+            text1Fade.FadeIn(fadingTime, callBack);
+            text1.text = text;
         }
         else
         {
-            text2.text = text;
-            text2Fade.FadeIn(fadingTime, callBack);
             text1Fade.FadeOut(fadingTime);
+            text2Fade.FadeIn(fadingTime, callBack);
+            text2.text = text;
         }
     }
 }
