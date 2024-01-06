@@ -14,6 +14,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private Text text1;
     [SerializeField] private Text text2;
     [SerializeField] private Image backGround;
+    [SerializeField] private FadeInOut flashFade;
     [SerializeField] private FadeInOut screenFade;
     private FadeInOut image1Fade;
     private FadeInOut image2Fade;
@@ -23,7 +24,10 @@ public class IntroManager : MonoBehaviour
     [Header("인트로 설정")]
     [SerializeField] private Sprite backGroundSprite;
     [SerializeField] private CutSceneData[] introCutScenes;
+    [SerializeField] private Sprite endingSprite;
+    [SerializeField] private string endingText;
     [SerializeField] private float fadingTime;
+    [SerializeField] private float flashFadingTime;
     [SerializeField] private float endFadingTime;
 
     private void Start()
@@ -63,8 +67,8 @@ public class IntroManager : MonoBehaviour
         }
         else
         {
-            SetButtonAction(Gamestart);
-            screenFade.FadeIn(endFadingTime, Gamestart);
+            ShowImage(endingSprite);
+            ShowText(endingText, () => flashFade.FadeIn(flashFadingTime, () => screenFade.FadeIn(endFadingTime, Gamestart)));
         }
     }
 
