@@ -13,10 +13,6 @@ public class IntroManager : StoryManager
     [Header("인트로 설정")]
     [SerializeField] private AudioClip bgmClip;
     [SerializeField] private CutSceneData[] introCutScenes;
-    [SerializeField] private Sprite endingSprite;
-    [SerializeField] private string endingText;
-    [SerializeField] private float flashDelayTime;
-    [SerializeField] private float flashFadingTime;
     [SerializeField] private float endFadingTime;
 
     protected override void Start()
@@ -49,16 +45,8 @@ public class IntroManager : StoryManager
         }
         else
         {
-            ShowImage(endingSprite);
-            ShowText(endingText, null);
             SetButtonAction(null);
-
-            StartCoroutine(Delay());
-            IEnumerator Delay()
-            {
-                yield return new WaitForSeconds(flashDelayTime);
-                flashFade.FadeIn(flashFadingTime, () => screenFade.FadeIn(endFadingTime, Gamestart));
-            }
+            screenFade.FadeIn(endFadingTime, Gamestart);
         }
     }
 
