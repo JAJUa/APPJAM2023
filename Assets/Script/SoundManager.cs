@@ -19,6 +19,7 @@ public class SoundManager : MonoBehaviour
             GameObject g = new GameObject("SoundManager");
             g.AddComponent<AudioSource>();
             _instance = g.AddComponent<SoundManager>();
+            DontDestroyOnLoad(g);
             return _instance;
         }
     }
