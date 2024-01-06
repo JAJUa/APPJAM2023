@@ -19,6 +19,7 @@ public class GuestData : ScriptableObject
 [Serializable]
 public struct GuestAct
 {
+    [TextArea]
     public string text;
     public Sprite guestSprite;
     public AudioClip clip;
