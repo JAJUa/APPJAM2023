@@ -41,6 +41,7 @@ public class GamePlayManager : MonoBehaviour
         curruntDay++;
         OnStartedDay?.Invoke();
 
+        _dayUIText.text = "Day " + curruntDay.ToString();
         _dayUIfade.FadeIn(_dayChangeFadingTime);
 
         StartCoroutine(Delay());
