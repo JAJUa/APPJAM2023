@@ -64,17 +64,18 @@ public class GuestCharacter : MonoBehaviour
         int actIndex = 0;
         void NextAct()
         {
-            actIndex++;
             if (actIndex < actData.Length)
             {
+                _spriteRenderer.sprite = actData[actIndex].guestSprite;
                 _speachBurble.Talk(actData[actIndex], NextAct);
             }
             else
             {
                 callBack?.Invoke();
             }
+            actIndex++;
         }
 
-        _speachBurble.Talk(actData[actIndex], NextAct);
+        NextAct();
     }
 }
