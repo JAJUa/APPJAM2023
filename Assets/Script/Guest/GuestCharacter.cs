@@ -66,7 +66,10 @@ public class GuestCharacter : MonoBehaviour
         {
             if (actIndex < actData.Length)
             {
-                _spriteRenderer.sprite = actData[actIndex].guestSprite;
+                if (actData[actIndex].guestSprite != null)
+                {
+                    _spriteRenderer.sprite = actData[actIndex].guestSprite;
+                }
                 _speachBurble.Talk(actData[actIndex], NextAct);
             }
             else
