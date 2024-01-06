@@ -108,12 +108,12 @@ public class GamePlayManager : MonoBehaviour
         GameManager.Instance.CurrentGuestData = GameManager.Instance.CurruntDaysGuestPool[Random.Range(0, GameManager.Instance.CurruntDaysGuestPool.Count)];
         GameManager.Instance.CurruntDaysGuestPool.Remove(GameManager.Instance.CurrentGuestData);
 
-        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentGuestData, StartCooking);
+        _guestCharacter.StartGuestAct(GameManager.Instance.CurrentGuestData, () => { _fadeInOut.FadeIn(1, StartCooking); });
     }
 
     private void StartCooking()
     {
-        
+        SceneManager.LoadScene("TempCookingScene");
     }
 
     private void FinishGame()

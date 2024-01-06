@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class FadeInOut : MonoBehaviour
     private bool _isShow;
     private float _fadingTime;
     private float _remainingFadeTime;
+
+    private Action _callBack;
 
     private void Awake()
     {
@@ -24,6 +27,9 @@ public class FadeInOut : MonoBehaviour
 
             if (_remainingFadeTime <= 0)
             {
+                _callBack?.Invoke();
+                _callBack = null;
+                
                 _graphic.enabled = _isShow;
             }
             else
@@ -52,6 +58,7 @@ public class FadeInOut : MonoBehaviour
         _isShow = true;
         _fadingTime = fadingTime;
         _remainingFadeTime = _fadingTime;
+        _callBack = null;
     }
 
     /// <summary>
@@ -62,6 +69,19 @@ public class FadeInOut : MonoBehaviour
         _isShow = false;
         _fadingTime = fadingTime;
         _remainingFadeTime = _fadingTime;
+        _callBack = null;
+    }
+
+    public void FadeOut(float fadingTime, Action callBack)
+    {
+        FadeOut(fadingTime);
+        _callBack = callBack;
+    }
+
+    public void FadeIn(float fadingTime,Action callBack)
+    {
+        FadeIn(fadingTime);
+        _callBack = callBack;
     }
 
     public void SetFade(bool isShow)
