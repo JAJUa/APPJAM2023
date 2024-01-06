@@ -7,8 +7,8 @@ public class GuestCharacter : MonoBehaviour
 {
     [SerializeField] private GuestSpeachBurble _speachBurble;
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private GuestData _guestData;
 
+    private GuestData _guestData;
     private Action<bool> _guestFinishCallBack;
 
     private void Awake()
@@ -16,14 +16,14 @@ public class GuestCharacter : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void SetGuestData(GuestData guestData, Action startCallBack, Action<bool> guestFinishCallBack)
+    public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> recieveFoodCallBack)
     {
         _guestData = guestData;
 
         _spriteRenderer.sprite = _guestData.defaultSprite;
-        _guestFinishCallBack = guestFinishCallBack;
+        _guestFinishCallBack = recieveFoodCallBack;
 
-        FirstAct(startCallBack);
+        FirstAct(cookingStartCallBack);
     }
 
     private void FirstAct(Action callBack)
