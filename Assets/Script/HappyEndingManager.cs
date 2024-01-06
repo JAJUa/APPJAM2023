@@ -29,6 +29,7 @@ public class HappyEndingManager : StoryManager
         base.Start();
 
         //Á¤½Å³ª°¥°Í°°¿¨¿¨¿¡¤Ä¤·¿¨¤·
+        screenFade.FadeOut(1);
         ShowImage(sprite1, null);
         ShowText(script1, () =>
         Delay(scriptDelay, () =>

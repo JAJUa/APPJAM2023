@@ -624,7 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ef067f6b1cdf4c54aa74989df5c0822f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1135,6 +1135,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685322776}
+  - component: {fileID: 1685322778}
+  - component: {fileID: 1685322777}
   m_Layer: 5
   m_Name: Bad End
   m_TagString: Untagged
@@ -1162,6 +1164,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1685322777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685322775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b29f94d79a2744ba54fa1cb044a905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1685322778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685322775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b29f94d79a2744ba54fa1cb044a905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788267143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HappyEnd: {fileID: 1573144645}
   BadEnd: {fileID: 1685322775}
+  isDebug: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
