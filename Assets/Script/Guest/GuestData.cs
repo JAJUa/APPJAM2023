@@ -6,6 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "º’¥‘ µ•¿Ã≈Õ", menuName = "Scriptable Object/º’¥‘ µ•¿Ã≈Õ", order = int.MinValue)]
 public class GuestData : ScriptableObject
 {
+    public Sprite defaultSprite;
+
+    public GuestAct[] startAct;
     public GuestAct[] goodReaction;
     public GuestAct[] badReaction;
 }
@@ -14,5 +17,5 @@ public class GuestData : ScriptableObject
 public struct GuestAct
 {
     public string text;
-    public Sprite sprite;
+    public Sprite guestSprite;
 }
