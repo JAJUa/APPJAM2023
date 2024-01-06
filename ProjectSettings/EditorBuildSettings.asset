@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 34846c2b9510e6c44b6099f1a85dc3bc
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 8f6347c69c0644841866ed6b6a76e9c6
+  - enabled: 1
     path: Assets/Scenes/GamePlayScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TempCookingScene.unity
+    guid: a630c441ab30ea94291972537a129936
+  - enabled: 1
+    path: Assets/Scenes/GameEndScene.unity
+    guid: c62f4989d96815246b51d0217353ba7a
   m_configObjects: {}
