@@ -659,7 +659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guestCharacter: {fileID: 21980788}
-  _day1GuestPool: []
+  _day1GuestPool:
+  - {fileID: 11400000, guid: 89b2c995a3f361840b65fbcb407c284b, type: 2}
   _day2GuestPool: []
   _day3GuestPool: []
   _day4GuestPool: []
