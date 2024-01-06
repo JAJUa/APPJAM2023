@@ -18,6 +18,8 @@ public class EndingManager : StoryManager
     protected override void Start()
     {
         base.Start();
+
+        //Á¤½Å³ª°¥°Í°°¿¨¿¨¿¡¤Ä¤·¿¨¤·
         ShowImage(sprite1,
             () => ShowImage(sprite2,
             () =>
