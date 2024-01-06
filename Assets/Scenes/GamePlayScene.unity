@@ -661,8 +661,13 @@ MonoBehaviour:
   _guestCharacter: {fileID: 21980788}
   _day1GuestPool:
   - {fileID: 11400000, guid: 158ab81ea8e458647a77966b1edd522c, type: 2}
-  _day2GuestPool: []
-  _day3GuestPool: []
+  _day2GuestPool:
+  - {fileID: 11400000, guid: 20219458971fdaa47a3363948d1f78b2, type: 2}
+  - {fileID: 11400000, guid: ddfd4ab604523fa41b0abef055429e6b, type: 2}
+  _day3GuestPool:
+  - {fileID: 11400000, guid: 76191f5da7b6a9945a662f2519855cbb, type: 2}
+  - {fileID: 11400000, guid: 0929b7b2077d23e4b8a361075297caca, type: 2}
+  - {fileID: 11400000, guid: 20219458971fdaa47a3363948d1f78b2, type: 2}
   _day4GuestPool: []
   _day5GuestPool: []
   _fadeInOut: {fileID: 2055657408}
