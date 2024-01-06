@@ -3,18 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuestCharacter : MonoBehaviour
+public class GuestCharacter : NPC
 {
-    [SerializeField] private GuestSpeachBurble _speachBurble;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-
     private GuestData _guestData;
     private Action<bool> _guestFinishCallBack;
-
-    private void Awake()
-    {
-
-    }
 
     public void StartGuestAct(GuestData guestData, Action cookingStartCallBack, Action<bool> finishCallBack)
     {
@@ -57,28 +49,5 @@ public class GuestCharacter : MonoBehaviour
     private void BadReaction(Action callBack)
     {
         Act(_guestData.badReaction, callBack);
-    }
-
-    private void Act(GuestAct[] actData, Action callBack)
-    {
-        int actIndex = 0;
-        void NextAct()
-        {
-            if (actIndex < actData.Length)
-            {
-                if (actData[actIndex].guestSprite != null)
-                {
-                    _spriteRenderer.sprite = actData[actIndex].guestSprite;
-                }
-                _speachBurble.Talk(actData[actIndex], NextAct);
-            }
-            else
-            {
-                callBack?.Invoke();
-            }
-            actIndex++;
-        }
-
-        NextAct();
     }
 }
